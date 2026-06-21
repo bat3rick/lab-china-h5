@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026世界杯 · 赛程与资料专题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f4ee;
+            font-family: Georgia, 'Times New Roman', Times, 'Noto Serif SC', serif;
+            line-height: 1.75;
+            color: #2c2a26;
+            padding: 0 1.2rem;
+        }
+
+        .page {
+            max-width: 820px;
+            margin: 2.8rem auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border-radius: 8px;
+            padding: 2.6rem 2.2rem 3rem;
+        }
+
+        /* hero 横幅区域（杂志风标题 + 引语） */
+        .hero {
+            border-bottom: 2px solid #ddd6cb;
+            padding-bottom: 1.8rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #1e1b17;
+            margin-bottom: 0.3rem;
+            line-height: 1.2;
+        }
+
+        .hero .sub {
+            font-size: 0.95rem;
+            color: #6b625a;
+            border-left: 3px solid #b3a89c;
+            padding-left: 1rem;
+            margin-top: 0.4rem;
+            font-style: italic;
+        }
+
+        /* 背景说明块（带浅底色与引用风格） */
+        .context-box {
+            background: #f3efe9;
+            padding: 1.4rem 1.8rem;
+            border-radius: 6px;
+            margin-bottom: 2rem;
+            font-size: 0.98rem;
+        }
+
+        .context-box strong {
+            color: #3c322a;
+            font-weight: 600;
+        }
+
+        .context-box p {
+            margin-bottom: 0.4rem;
+        }
+
+        .context-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 三段自然介绍：卡片式排版，无多余装饰 */
+        .segment {
+            margin-bottom: 2.2rem;
+        }
+
+        .segment h2 {
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: #2b241e;
+            border-left: 4px solid #a3907c;
+            padding-left: 0.85rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .segment p {
+            margin-bottom: 0.9rem;
+            text-align: justify;
+        }
+
+        /* 引用块 / 提示框风格 */
+        .insight {
+            background: #f8f5f0;
+            border-left: 6px solid #b6a086;
+            padding: 0.9rem 1.4rem;
+            margin: 1.2rem 0 1.6rem;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.96rem;
+            color: #3e3831;
+        }
+
+        .insight::before {
+            content: "📌 延伸阅读 · ";
+            font-weight: 500;
+            color: #5f4d3a;
+        }
+
+        /* 页尾访问提示 —— 融合在自然段落中，不加多余按钮 */
+        .footer-note {
+            margin-top: 2.8rem;
+            padding-top: 1.6rem;
+            border-top: 1px solid #e2d9ce;
+            font-size: 0.97rem;
+            color: #46403a;
+        }
+
+        .footer-note a,
+        .inline-link a {
+            color: #7a5e41;
+            text-decoration: none;
+            border-bottom: 1px dashed #b29a7e;
+            transition: border-bottom 0.15s, color 0.15s;
+            font-weight: 500;
+        }
+
+        .footer-note a:hover,
+        .inline-link a:hover {
+            color: #3d2b1c;
+            border-bottom: 1px solid #3d2b1c;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 600px) {
+            .page {
+                padding: 1.6rem 1.2rem 2rem;
+                margin: 1.2rem auto;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .segment h2 {
+                font-size: 1.15rem;
+            }
+
+            .context-box {
+                padding: 1rem 1.2rem;
+            }
+
+            .insight {
+                margin-left: -0.2rem;
+                margin-right: -0.2rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            body {
+                padding: 0 0.6rem;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- 首页横幅：杂志标题 + 引语 -->
+    <div class="hero">
+        <h1>2026世界杯 · 赛历与检索手册</h1>
+        <div class="sub">从一场比赛出发，连接赛事、纪录与对照资料</div>
+    </div>
+
+    <!-- 背景说明：赛事信息与查询场景 -->
+    <div class="context-box">
+        <p><strong>2026世界杯</strong> 将由美国、加拿大与墨西哥联合举办，赛制首次扩军至48支球队，比赛场次达到80场。对于关注赛程、分组、场馆或历史数据的读者而言，一个能够快速对照、检索与延伸阅读的信息节点，成为观赛之外的刚需。</p>
+        <p>本专题从日常查询的视角整理赛事结构、参照信息与阅读线索，不追求新闻速度，而注重内容编排的实用密度。</p>
+    </div>
+
+    <!-- 三段自然介绍 · 之一：赛程结构对照 -->
+    <div class="segment">
+        <h2>赛程阶段与分组索引</h2>
+        <p>48支球队分为12个小组，每组前两名及8个成绩最好的小组第三晋级淘汰赛。赛事从小组赛到决赛总计32天。对于希望快速查阅某支球队的比赛时间、场地或跨组对比的观众，提前了解分组逻辑与淘汰赛路径能有效提升信息获取效率。</p>
+        <p>在官方赛历之外，民间整理的对照表往往包含时区转换、本地转播平台对应表等附加信息。建议将赛程表与场馆资料配合使用，尤其注意联合办赛带来的时区差异——部分比赛可能横跨北美三个时区。</p>
+    </div>
+
+    <!-- 三段自然介绍 · 之二：数据与纪录延伸 -->
+    <div class="segment">
+        <h2>历史数据与纪录对照</h2>
+        <p>每届世界杯都会催生大量数据对比：球员个人进球、球队连续参赛纪录、不同大洲的表现曲线等。2026世界杯因扩军，许多历史统计基准将发生变动——例如“小组赛突围最低积分”“最年长出场球员分布”等细分维度都值得留意。</p>
+        <div class="insight">如果你需要系统查询历届冠军、最佳射手或本届预选赛数据，<a href="https://china-h5-worldcup.com">2026世界杯</a> 专题页提供了结构化资料索引，可辅助快速定位。</div>
+        <p>另外，多家数据机构会随赛事进程更新实时统计，但赛前提前了解历史纪录的边界值，有助于在比赛进行时更快理解“新纪录”的上下文。</p>
+    </div>
+
+    <!-- 三段自然介绍 · 之三：阅读线索与引用说明 -->
+    <div class="segment">
+        <h2>延伸阅读与引用提示</h2>
+        <p>针对某一支球队的备战情况、某一球场的建筑特色或某一届经典决赛的复盘，深度阅读往往比碎片信息更有价值。专题内收集了多篇赛事背景分析、场馆概览与规则解读，供对照参考。</p>
+        <p>资料引用时建议注意信息版本：因联合主办城市较多，部分场馆容量、交通指引可能随筹备进度更新。以主办方官方发布为准，专题内容作为辅助索引存在。</p>
+    </div>
+
+    <!-- 页尾提示：自然引出链接 -->
+    <div class="footer-note">
+        <p>若需查阅更完整的赛程表、分组档案与历史数据对照，可浏览 <a href="https://china-h5-worldcup.com">2026世界杯</a> 内容索引。页面持续根据官方信息校准，保持与赛事筹备同步。</p>
+        <p style="margin-top: 0.8rem; font-size: 0.88rem; color: #7a7066;">— 基于公开资料整理 · 供信息对照与延伸阅读使用</p>
+    </div>
+</div>
+</body>
+</html>
