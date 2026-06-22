@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问鼎H5 · 知识库 · 简明指南与访问提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            background: #f5f7fa;
+            color: #1c1e21;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(145deg, #0b0f18 0%, #1a1f2b 100%);
+            color: #eef0f5;
+            padding: 3.5rem 1.5rem 3rem;
+            text-align: center;
+            position: relative;
+            box-shadow: inset 0 -1px 0 rgba(255,255,255,0.06);
+        }
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #b5c2ea, #e1e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .header .sub {
+            margin-top: 0.6rem;
+            font-size: 1.1rem;
+            color: #9aa2b9;
+            border-bottom: 1px solid #2b3141;
+            display: inline-block;
+            padding-bottom: 0.6rem;
+        }
+        .header .badge {
+            display: inline-block;
+            margin-top: 1.2rem;
+            background: #2f3b58;
+            color: #d5def5;
+            padding: 0.25rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            backdrop-filter: blur(2px);
+        }
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 2.2rem 1.5rem 3rem;
+        }
+        .guide-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem 2rem 2.2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03), 0 1px 4px rgba(0,0,0,0.05);
+            border: 1px solid #e9ecf2;
+        }
+        .guide-card h2 {
+            font-size: 1.6rem;
+            font-weight: 550;
+            margin-bottom: 0.4rem;
+            color: #111318;
+            letter-spacing: -0.01em;
+        }
+        .guide-card .meta-line {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 2rem;
+            margin: 0.8rem 0 1.4rem;
+            color: #5b6378;
+            font-size: 0.92rem;
+            border-bottom: 1px dashed #d9dee6;
+            padding-bottom: 0.8rem;
+        }
+        .guide-card .summary {
+            font-size: 1rem;
+            margin: 0.6rem 0 1.2rem;
+            color: #2e313a;
+        }
+        .guide-card .summary a {
+            color: #1f3a8f;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #cbd5e8;
+            transition: all 0.2s;
+        }
+        .guide-card .summary a:hover {
+            border-bottom-color: #1f3a8f;
+            background: #f0f4ff;
+        }
+        .highlight {
+            background: #eef2fa;
+            padding: 0.1rem 0.4rem;
+            border-radius: 6px;
+            font-weight: 500;
+            color: #0d1b44;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem 2rem;
+            margin: 1.6rem 0 0.2rem;
+        }
+        .info-item {
+            background: #f8faff;
+            border-radius: 16px;
+            padding: 1.2rem 1.2rem 1.2rem 1.4rem;
+            border-left: 4px solid #2f4a9e;
+        }
+        .info-item h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: #141a2b;
+        }
+        .info-item p {
+            font-size: 0.9rem;
+            color: #3d455c;
+        }
+        .alert-area {
+            background: #faf3e0;
+            border-radius: 20px;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0;
+            border: 1px solid #e6dbbc;
+        }
+        .alert-area .alert-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #57441b;
+            margin-bottom: 0.6rem;
+        }
+        .alert-area ul {
+            list-style: none;
+            padding: 0;
+        }
+        .alert-area li {
+            padding: 0.4rem 0 0.4rem 1.6rem;
+            position: relative;
+            color: #3d3523;
+            font-size: 0.95rem;
+        }
+        .alert-area li::before {
+            content: "›";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #9c7e3f;
+            font-size: 1.4rem;
+            line-height: 1.2;
+        }
+        .faq-summary {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin: 2rem 0 0.5rem;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 18px;
+            padding: 1.2rem 1.6rem;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e2e7ef;
+        }
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
+        }
+        .faq-item span {
+            color: #374151;
+            font-size: 0.93rem;
+        }
+        .faq-item span a {
+            color: #1f3a8f;
+            text-decoration: none;
+            border-bottom: 1px dotted #b1c0d9;
+        }
+        .faq-item span a:hover {
+            border-bottom-style: solid;
+            background: #f2f6fe;
+        }
+        .sitemap-note {
+            margin-top: 2.8rem;
+            padding: 1.6rem 0;
+            border-top: 1px solid #dee3ec;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #515a6e;
+        }
+        .sitemap-note a {
+            color: #1f3a8f;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .sitemap-note a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 640px) {
+            .header h1 { font-size: 2rem; }
+            .info-grid { grid-template-columns: 1fr; }
+            .guide-card { padding: 1.5rem; }
+            .alert-area { padding: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>问鼎H5 · 知识库</h1>
+        <div class="sub">简明指南 ｜ 访问提醒 ｜ 相关信息</div>
+        <div class="badge">版本索引 · 24e2ebe</div>
+    </header>
+
+    <div class="container">
+
+        <!-- 核心说明卡：目录感布局 -->
+        <div class="guide-card">
+            <h2>📋 快速索引</h2>
+            <div class="meta-line">
+                <span>站点类型：H5 工具 / 内容聚合</span>
+                <span>推荐环境：现代浏览器 + 稳定网络</span>
+            </div>
+            <div class="summary">
+                <strong>问鼎H5</strong> 是一套面向网页端的功能页面集合，涵盖信息查阅、交互工具与轻量服务。  
+                若你初次接触，建议先浏览 <a href="https://webs-wendingh5.com">问鼎h5</a> 的首页结构，了解模块分布。  
+                日常使用中可将其加入书签，以便快速返回。
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>📌 页面结构</h4>
+                    <p>主导航、分类卡片、底栏索引；每个区域对应独立功能入口，布局以清晰为重。</p>
+                </div>
+                <div class="info-item">
+                    <h4>⚙️ 交互提示</h4>
+                    <p>部分模块依赖 JavaScript 动态加载，确保浏览器未禁用脚本可获完整体验。</p>
+                </div>
+                <div class="info-item">
+                    <h4>🔐 隐私说明</h4>
+                    <p>站点不收集个人敏感信息，通用访问日志仅用于稳定性维护。</p>
+                </div>
+                <div class="info-item">
+                    <h4>🧩 兼容备忘</h4>
+                    <p>推荐使用 Chrome / Edge / Firefox 近期版本，移动端视口适配良好。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 提示区：访问提醒 + 注意事项 -->
+        <div class="alert-area">
+            <div class="alert-title">⚠️ 访问提醒</div>
+            <ul>
+                <li>若页面加载异常，请先刷新或检查网络连接；部分资源可能因缓存延迟显示。</li>
+                <li>请通过地址栏直接输入 <span class="highlight">webs-wendingh5.com</span> 或使用可靠来源链接，避免仿冒站点。</li>
+                <li>站点未内置自动跳转，所有操作均由用户主动触发。</li>
+                <li>如遇到排版错乱，可尝试清除浏览器缓存或切换至「无痕模式」测试。</li>
+            </ul>
+        </div>
+
+        <!-- FAQ 摘要区，相关信息 -->
+        <div style="margin: 1.8rem 0 0.8rem;">
+            <h3 style="font-weight: 550; font-size: 1.3rem; color: #0b1224; letter-spacing: -0.01em;">❓ 常见疑问摘要</h3>
+        </div>
+        <div class="faq-summary">
+            <div class="faq-item">
+                <strong>· 是否需要在特定时段访问？</strong>
+                <span>不需要。站点提供 7×24 小时服务，但偶尔会有数分钟维护窗口（通常凌晨）。</span>
+            </div>
+            <div class="faq-item">
+                <strong>· 移动端与桌面端内容一致吗？</strong>
+                <span>核心内容一致，仅部分列表页在窄屏采用纵向堆叠布局。若需大屏对照，可随时通过 <a href="https://webs-wendingh5.com">问鼎h5</a> 查看桌面版。</span>
+            </div>
+            <div class="faq-item">
+                <strong>· 是否有离线使用方案？</strong>
+                <span>当前主要面向在线场景，未提供离线包。建议在网络稳定的环境下使用。</span>
+            </div>
+            <div class="faq-item">
+                <strong>· 如何反馈页面问题？</strong>
+                <span>可通过站点内「反馈」入口提交描述，或联系对应渠道（预计 1-3 个工作日回复）。</span>
+            </div>
+        </div>
+
+        <!-- 相关信息区：额外指引 -->
+        <div style="margin-top: 2.8rem; padding: 1.4rem 0 0.2rem; border-top: 1px solid #dce1ec;">
+            <h4 style="font-weight: 550; font-size: 1.1rem; color: #1b233d;">📎 相关信息</h4>
+            <p style="color: #3b435b; font-size: 0.95rem; margin-top: 0.5rem;">
+                本站知识库持续更新，建议间隔一段时间重新浏览首页，了解模块变动。  
+                此外，可通过书签直接定位到 <a href="https://webs-wendingh5.com" style="color: #1f3a8f; text-decoration: none; border-bottom: 1px solid #b8c6e0;">问鼎h5</a> 的主功能区，无需多余步骤。
+            </p>
+            <p style="color: #4a5470; font-size: 0.9rem; margin: 0.6rem 0 0.2rem;">
+                如果你对页面内容有明确目标，建议先使用站内搜索或浏览目录标题，能更快找到对应板块。
+            </p>
+        </div>
+
+        <div class="sitemap-note">
+            <span>© 知识库入口 · 内容版本基于 24e2ebeff7f53a6e ｜ 主站：<a href="https://webs-wendingh5.com">问鼎h5</a></span>
+        </div>
+    </div>
+</body>
+</html>
